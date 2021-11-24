@@ -28,22 +28,22 @@ namespace ResolucionProblemas.Retos
 
         public static void plusMinus(List<int> arr)
         {
-            decimal Zero = 0;
-            decimal Negativo = 0;
-            decimal Positivo = 0;
+            //decimal Zero = 0;
+            //decimal Negativo = 0;
+            //decimal Positivo = 0;
 
-            decimal Cantidad = arr.Count;
-            for (int i = 0; i < Cantidad; i++)
-            {
-                if (arr[i] < 0) Negativo++;
-                else if (arr[i] > 0) Positivo++;
-                else Zero++;
+            //decimal Cantidad = arr.Count;
+            //for (int i = 0; i < Cantidad; i++)
+            //{
+            //    if (arr[i] < 0) Negativo++;
+            //    else if (arr[i] > 0) Positivo++;
+            //    else Zero++;
 
-            }
+            //}
 
-            Console.WriteLine($"{Zero / Cantidad:F6}");
-            Console.WriteLine($"{Negativo / Cantidad:F6}");
-            Console.WriteLine($"{Positivo / Cantidad:F6}");
+            //Console.WriteLine($"{Zero / Cantidad:F6}");
+            //Console.WriteLine($"{Negativo / Cantidad:F6}");
+            //Console.WriteLine($"{Positivo / Cantidad:F6}");
 
 
             decimal posi = 0;
@@ -78,12 +78,35 @@ namespace ResolucionProblemas.Retos
 
             for (int i = 0; i < n; i++)
             {
-                sb.Append(' ',n-(i+1));
-                sb.Append('*', i+1);
+                sb.Append(' ', n - (i + 1));
+                sb.Append('*', i + 1);
 
                 Console.WriteLine(sb);
                 sb.Clear();
             }
+
+        }
+
+        public static void miniMaxSum(List<int> arr)
+        {
+            long SumaMinimo = 0;
+            long SumaMaximo = 0;
+            var orderdenar = arr.OrderBy(e => e).ToList();
+
+            for (int i = 0; i < orderdenar.Count; i++)
+            {
+                if (i >= 0 && i < orderdenar.Count - 1)
+                {
+                    SumaMinimo += orderdenar[i];
+                }
+
+                if (i > 0 && i <= orderdenar.Count)
+                {
+                    SumaMaximo += orderdenar[i];
+                }
+            }
+
+            Console.WriteLine(SumaMinimo + " " + SumaMaximo);
 
         }
 

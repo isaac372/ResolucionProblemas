@@ -44,8 +44,22 @@ namespace ResolucionProblemas
             //agregar.Add(1);
             //Reto2.plusMinus(agregar);
 
-            Reto2.staircase(6);
+            //Reto2.staircase(6);
+            List<int> agregar = new List<int>();
+           
+                
+            agregar.Add(7);
+            agregar.Add(69);
+            agregar.Add(2);
+            agregar.Add(221);
+            agregar.Add(8974);
+            //agregar.Add(1);
+            //agregar.Add(2);
+            //agregar.Add(3);
+            //agregar.Add(4);
+            //agregar.Add(5);
 
+            Reto2.miniMaxSum(agregar);
 
             Console.ReadLine();
         }
