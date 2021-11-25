@@ -110,5 +110,30 @@ namespace ResolucionProblemas.Retos
 
         }
 
+        //You are in charge of the cake for a child's birthday.
+        //You have decided the cake will have one candle for each year
+        //of their total age. They will only be able to blow out the tallest
+        //of the candles. Count how many candles are tallest.
+        public static int birthdayCakeCandles(List<int> candles)
+        {
+            int totalExistentes = 0;
+            int max = candles.Max();
+
+            for (int i = 0; i < candles.Count; i++)
+            {
+                if (candles[i] == max) totalExistentes++;
+            }
+            return totalExistentes;
+        }
+
+        //  Given a time in -hour AM/PM format, convert it to military(24-hour) time.
+        //Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
+        //- 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
+        public static string timeConversion(string s)
+        {
+            return DateTime.Parse(s).ToLocalTime().ToLongTimeString();
+        }
+
+
     }
 }
