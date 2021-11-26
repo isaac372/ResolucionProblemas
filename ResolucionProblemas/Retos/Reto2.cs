@@ -131,7 +131,8 @@ namespace ResolucionProblemas.Retos
         //- 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
         public static string timeConversion(string s)
         {
-            return DateTime.Parse(s).ToLocalTime().ToLongTimeString();
+           string Hour=  DateTime.Parse(s).ToString();
+            return DateTime.Parse(s).ToLongTimeString();
         }
 
 
